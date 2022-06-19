@@ -1,0 +1,21 @@
+[package]
+name = "pipeline"
+version = "0.1.0"
+edition = "2021"
+description = "A binary for handling test pipelines"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/sobriodev/pipeline"
+readme = "README.md"
+keywords = ["testing"]
+categories = ["testing"]
+
+[dependencies]
+clap = { version = "3.1.18", features = ["derive"] }
+log = "0.4.17"
+env_logger = "0.9.0"
+serde = "1.0"
+serde_yaml = "0.8"
+paste = "1.0.7"
+
+[dev-dependencies]
+rstest = "0.13.0"
