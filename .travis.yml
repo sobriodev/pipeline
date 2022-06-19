@@ -12,8 +12,11 @@ rust:
 matrix:
   allow_failures:
     - rust: nightly
-before_script:
+before_script: |
   rustup component add clippy
+  if [[ "$TRAVIS_RUST_VERSION" == stable ]]; then
+  cargo install cargo-tarpaulin
+  fi
 script:
   - cargo clean
   - cargo build
