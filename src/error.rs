@@ -16,6 +16,7 @@ pub struct Pipeline {
 
 impl Pipeline {
     /// Construct a pipeline error instance.
+    #[must_use]
     pub fn new(error_string: &str) -> Self {
         Self {
             error_string: error_string.to_string(),
@@ -24,6 +25,7 @@ impl Pipeline {
     }
 
     /// Constructs pipeline error instance with an extra debug string.
+    #[must_use]
     pub fn new_debug(error_string: &str, debug_string: &str) -> Self {
         Self {
             error_string: error_string.to_string(),
